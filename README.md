@@ -43,7 +43,7 @@ To use ChitaMitra, you can follow these steps:
 
 # Contributing
 
-We welcome contributions to ChitaMitra! If you find a bug or want to add a new feature, please create a pull request. Before contributing, please read our  [contributing guidelines for this project](blob/master/CONTRIBUTING.md).
+We welcome contributions to ChitaMitra! If you find a bug or want to add a new feature, please create a pull request. Before contributing, please read our  [contributing guidelines for this project](/CONTRIBUTING.md).
 
 # Support
 If you encounter any issues while using ChitaMitra, please create an issue in the issue tracker. We'll do our best to help you resolve the issue.
