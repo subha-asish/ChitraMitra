@@ -2,7 +2,7 @@
 Thank you for your interest in contributing to ChitaMitra! By contributing to this project, you agree to follow the guidelines outlined in this document.
 
 ## Code of Conduct
-Please review our [Code of Conduct](docs/CODEOFCONDUCT.md) before contributing. We want all contributors to be respectful and professional when interacting
+Please review our [Code of Conduct](/CodeOfConduct.md) before contributing. We want all contributors to be respectful and professional when interacting
 with others in our community.
 
 ## Reporting Bugs
