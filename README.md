@@ -29,7 +29,7 @@ ChitaMitra's UI/UX design was carefully crafted to provide a seamless and intuit
 
 To install ChitaMitra, you can follow these steps:
 
-1. Clone the repository: git clone https://github.com/username/ChitaMitra.git.
+1. Clone the repository: git clone https://github.com/subha-asish/ChitraMitra/
 2. Open the project in Android Studio.
 3. Build the project.
 
