@@ -14,8 +14,11 @@ ChitaMitra is a movie searching app developed using Android Java, Retrofit, OMDB
 3. The app uses OMDB API to fetch movie data.
 4. The app uses Retrofit to make API requests.
 5. The app uses Picasso to render images.
+6. The app uses Firebase authentication.
 
 # Technical Details
+## Authentication
+ChitaMitra uses Firebase realtime database based authentication. 
 ## Architecture
 ChitaMitra uses the Model-View-ViewModel (MVVM) architecture. This architecture separates the user interface (View) from the business logic and data (ViewModel) and the data storage (Model).
 
