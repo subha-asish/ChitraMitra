@@ -1,9 +1,8 @@
 # ChitaMitra - A Movie Searching App
 
 ChitaMitra is a movie searching app developed using Android Java, Retrofit, OMDB API, UI/UX design, and Picasso for image rendering. This app provides users with movie posters, ratings, reviews, casts, descriptions, and year of release.
-![login](https://user-images.githubusercontent.com/82257697/225670657-d05d4f6c-a9e0-4537-97a0-b01a0e12e5b3.jpg)
-![signup](https://user-images.githubusercontent.com/82257697/225670674-5ba95da1-fd90-4fc8-9eac-409f30cbb736.jpg)
-
+![loginF](https://user-images.githubusercontent.com/82257697/225701117-b9d209e2-3b64-430a-9e93-dc36b53d8003.jpg)
+![signupF](https://user-images.githubusercontent.com/82257697/225701202-a1bd8895-9eaa-4fde-a2e3-206743d67a05.jpg)
 ![home](https://user-images.githubusercontent.com/82257697/225671032-5744c63a-047b-4e8e-95f8-ace53f309eab.jpg)
 ![details](https://user-images.githubusercontent.com/82257697/225671069-52387caa-50b8-4545-8b0c-700076bdb9b4.jpg)
 
