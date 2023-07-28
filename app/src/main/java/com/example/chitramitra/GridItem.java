@@ -2,26 +2,46 @@ package com.example.chitramitra;
 
 public class GridItem {
     String imgURL;
-    String Desc;
+    String Title;
+    String Year;
+    String Imdb;
 
-    public GridItem(String imgURL, String desc) {
+    public GridItem(String imgURL, String title, String year, String imdb) {
         this.imgURL = imgURL;
-        Desc = desc;
+        Title = title;
+        Year = year;
+        Imdb = imdb;
     }
 
     public String getImgURL() {
         return imgURL;
     }
 
-    public void setImgID(String imgID) {
-        this.imgURL = imgID;
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
     }
 
-    public String getDesc() {
-        return Desc;
+    public String getTitle() {
+        return Title;
     }
 
-    public void setDesc(String desc) {
-        Desc = desc;
+    public void setTitle(String title) {
+        Title = title;
+    }
+
+    public String getYear() {
+        return Year;
+    }
+
+    public void setYear(String year) {
+        Year = year;
+    }
+
+    public String getImdb() {
+        return Imdb;
+    }
+
+    public void setImdb(String imdb) {
+        Imdb = imdb;
     }
 }

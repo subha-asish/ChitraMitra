@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "569497443911",
+    "firebase_url": "https://chitramitra-27702-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "chitramitra-27702",
+    "storage_bucket": "chitramitra-27702.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569497443911:android:234e6991055c9b9adc9b62",
+        "android_client_info": {
+          "package_name": "com.example.chitramitra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569497443911-qc7a7c196iu9lho1q55t8709ef7f22bb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chitramitra",
+            "certificate_hash": "b72222e6885785b2bb9e7acea69995b6106761b4"
+          }
+        },
+        {
+          "client_id": "569497443911-0brg8qbvtka6bebpk0r0nr4ljhstgaqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvcK-6TJ-C4ApWdP_40UykFNn9TG8Ek1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569497443911-0brg8qbvtka6bebpk0r0nr4ljhstgaqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

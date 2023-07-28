@@ -9,16 +9,6 @@
 
     >
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -49,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/top_background" />
@@ -82,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Elisha Cuthberth"
+                android:text="Subhasis Pradhan"
                 android:textColor="#ffffff"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -121,7 +111,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10sp"
-                        android:text="VideoCall"
+                        android:text="Popular"
                         android:textAlignment="center"
                         android:textColor="#7182ef"
                         android:textStyle="bold" />
@@ -147,7 +137,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10sp"
-                        android:text="Notification"
+                        android:text="Upcoming"
                         android:textAlignment="center"
                         android:textColor="#7182ef"
                         android:textStyle="bold" />
@@ -173,7 +163,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10sp"
-                        android:text="VoiceCall"
+                        android:text="StayTuned"
                         android:textAlignment="center"
                         android:textColor="#7182ef"
                         android:textStyle="bold" />
@@ -200,8 +190,8 @@
                 android:inputType="textPersonName"
                 android:paddingLeft="10dp"
                 android:paddingEnd="0dp"
-                android:textStyle="bold"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/button"
                 app:layout_constraintStart_toStartOf="parent"
@@ -223,7 +213,7 @@
 
     </LinearLayout>
     <GridView
-        android:id="@+id/gridView"
+        android:id="@+id/gridViewMainActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

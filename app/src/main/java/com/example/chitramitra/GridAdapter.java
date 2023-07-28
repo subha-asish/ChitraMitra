@@ -1,9 +1,11 @@
 package com.example.chitramitra;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -45,12 +47,13 @@ public class GridAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             gridView = inflater.inflate(R.layout.grid_item, null);
 
+
             ImageView imageView = (ImageView) gridView.findViewById(R.id.grid_image);
             TextView textView = (TextView) gridView.findViewById(R.id.item_name);
 
             com.example.chitramitra.GridItem item = gridItems.get(position);
             Picasso.get().load(item.getImgURL()).into(imageView);
-            textView.setText(item.getDesc());
+            textView.setText(item.Title);
         } else {
             gridView = convertView;
         }
