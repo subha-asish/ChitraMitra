@@ -3,14 +3,15 @@
 ChitaMitra is a movie searching app developed using Android Java, Retrofit, OMDB API, UI/UX design, and Picasso for image rendering. This app provides users with movie posters, ratings, reviews, casts, descriptions, and year of release.
 ![loginF](https://user-images.githubusercontent.com/82257697/225701117-b9d209e2-3b64-430a-9e93-dc36b53d8003.jpg)
 ![signupF](https://user-images.githubusercontent.com/82257697/225701202-a1bd8895-9eaa-4fde-a2e3-206743d67a05.jpg)
-![home](https://user-images.githubusercontent.com/82257697/225671032-5744c63a-047b-4e8e-95f8-ace53f309eab.jpg)
-![details](https://user-images.githubusercontent.com/82257697/225671069-52387caa-50b8-4545-8b0c-700076bdb9b4.jpg)
+![Screenshot 2023-07-29 115935](https://github.com/subha-asish/ChitraMitra/assets/82257697/fb6cbdce-5f7f-4411-a7f4-94c209e8f3d5)
+![Screenshot 2023-07-29 115853](https://github.com/subha-asish/ChitraMitra/assets/82257697/ae7a5cae-f8dc-4a43-86d6-e5355816fb03)
+![Screenshot 2023-07-29 120028](https://github.com/subha-asish/ChitraMitra/assets/82257697/3a6f68fb-96f6-4146-9e7b-5feef1211472)
 
 
 # Features
 1. Users can search for movies by their titles.
 2. Users can view movie details such as posters, ratings, reviews, casts, descriptions, and year of release.
-3. The app uses OMDB API to fetch movie data.
+3. The app uses OMDB API and TMDB API to fetch movie data.
 4. The app uses Retrofit to make API requests.
 5. The app uses Picasso to render images.
 6. The app uses Firebase authentication.
