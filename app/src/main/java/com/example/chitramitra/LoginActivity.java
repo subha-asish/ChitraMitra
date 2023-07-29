@@ -40,6 +40,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // User is signed in
+            // go to main page
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
+
+
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

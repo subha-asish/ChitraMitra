@@ -43,51 +43,51 @@ public class SearchResults extends AppCompatActivity {
                 i.putExtra("key",gt.imgURL);
                 i.putExtra("title",gt.Title);
                 i.putExtra("year",gt.Year);
-                i.putExtra("imdb",gt.Imdb);
+                i.putExtra("imdb","Data Unavailable");
                 startActivity(i);
 
             }
         });
                 /*****************************************************************/
-                Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl(BASE_URL)
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-                com.example.chitramitra.ApiInteface myInteface = retrofit.create((com.example.chitramitra.ApiInteface.class));
+        com.example.chitramitra.ApiInteface myInteface = retrofit.create((com.example.chitramitra.ApiInteface.class));
 
-                Call<MovieResults> call = myInteface.getMovies(MOVIE_NAME, API_KEY);
+        Call<MovieResults> call = myInteface.getMovies(MOVIE_NAME, API_KEY);
 
-                call.enqueue(new Callback<MovieResults>() {
-                    @Override
-                    public void onResponse(Call<com.example.chitramitra.MovieResults> call, Response<MovieResults> response) {
-
-
-                        //
-                        if (!response.isSuccessful()) {
-                            // Handle error
-                            Toast.makeText(getApplicationContext(), "No Response", Toast.LENGTH_SHORT).show();
-                            return;
-                        }
-                        com.example.chitramitra.MovieResults results = response.body();
-                        List<Search> listOfMovies = results.getSearch();
-                        gridItems = new ArrayList<>();
-                        for (int i = 0; i < listOfMovies.size(); i++) {
-                            com.example.chitramitra.Search firstMovie = listOfMovies.get(i);
-                            gridItems.add(new com.example.chitramitra.GridItem(firstMovie.getPoster(), firstMovie.getTitle(), firstMovie.getYear(),
-                                    firstMovie.getImdbID()));
-                        }
-                        gridAdapter = new com.example.chitramitra.GridAdapter(getApplicationContext(), gridItems);
-                        gridView.setAdapter(gridAdapter);
-
-                    }
+        call.enqueue(new Callback<MovieResults>() {
+            @Override
+            public void onResponse(Call<com.example.chitramitra.MovieResults> call, Response<MovieResults> response) {
 
 
-                    @Override
-                    public void onFailure(Call<com.example.chitramitra.MovieResults> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(), "Failed" + t.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+                //
+                if (!response.isSuccessful()) {
+                    // Handle error
+                    Toast.makeText(getApplicationContext(), "No Response", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                com.example.chitramitra.MovieResults results = response.body();
+                List<Search> listOfMovies = results.getSearch();
+                gridItems = new ArrayList<>();
+                for (int i = 0; i < listOfMovies.size(); i++) {
+                    com.example.chitramitra.Search firstMovie = listOfMovies.get(i);
+                    gridItems.add(new com.example.chitramitra.GridItem(firstMovie.getPoster(), firstMovie.getTitle(), firstMovie.getYear(),
+                            firstMovie.getImdbID()));
+                }
+                gridAdapter = new com.example.chitramitra.GridAdapter(getApplicationContext(), gridItems);
+                gridView.setAdapter(gridAdapter);
+
+            }
+
+
+            @Override
+            public void onFailure(Call<com.example.chitramitra.MovieResults> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Failed" + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 

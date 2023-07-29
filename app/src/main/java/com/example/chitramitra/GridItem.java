@@ -6,6 +6,8 @@ public class GridItem {
     String Year;
     String Imdb;
 
+
+
     public GridItem(String imgURL, String title, String year, String imdb) {
         this.imgURL = imgURL;
         Title = title;

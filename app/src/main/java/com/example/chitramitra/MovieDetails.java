@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,6 +36,8 @@ String URL;
         setContentView(R.layout.activity_movie_details);
         TextView textView = findViewById(R.id.MovieTitle);
         TextView textView2 = findViewById(R.id.MovieYear);
+        Button bookNow = findViewById(R.id.BookTickets);
+        TextView Description = findViewById(R.id.Description);
 
 
         rootView = findViewById(android.R.id.content);
@@ -42,6 +46,15 @@ String URL;
         String title = intent.getStringExtra("title");
         String year = intent.getStringExtra("year");
         String imdb = intent.getStringExtra("imdb");
+
+        bookNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://in.bookmyshow.com/"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
         Picasso.get().load(URL).into(new Target() {
             @Override
@@ -62,6 +75,6 @@ String URL;
 
         textView.setText(title);
         textView2.setText(year);
-
+        Description.setText(imdb);
     }
 }
