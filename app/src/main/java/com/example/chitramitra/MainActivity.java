@@ -2,8 +2,11 @@ package com.example.chitramitra;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -112,11 +115,16 @@ public class MainActivity extends AppCompatActivity {
     button.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            MOVIE_NAME = editText.getText().toString();
-            Intent i = new Intent(getApplicationContext(),SearchResults.class);
-            i.putExtra("keyy",MOVIE_NAME);
-            startActivity(i);
+            final Animation myAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce);
 
+            // Use bounce interpolator with amplitude 0.2 and frequency 20
+            MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+            myAnim.setInterpolator(interpolator);
+
+            button.startAnimation(myAnim);
+            startNextActivityWithDelay();
+
+//
 
             /************************************************************************/
         }
@@ -250,5 +258,28 @@ public class MainActivity extends AppCompatActivity {
 //                Log.w("TAG", "Failed to read value.", error.toException());
 //            }
 //        });
+
+
+
+
+    }
+    // ANimation Added
+
+
+    private void startNextActivityWithDelay() {
+        long delayMillis = 500; // 2 seconds
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Start the next activity here
+            MOVIE_NAME = editText.getText().toString();
+            Intent i = new Intent(getApplicationContext(),SearchResults.class);
+            i.putExtra("keyy",MOVIE_NAME);
+            startActivity(i);
+            }
+        }, delayMillis);
+
     }
 }

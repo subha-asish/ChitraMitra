@@ -122,6 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="signup"
+            android:onClick="didTapButton"
             android:textColor="#0C0C0C"
             app:backgroundTint="#D8C7EC"
             android:textSize="16sp"

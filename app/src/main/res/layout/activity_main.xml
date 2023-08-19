@@ -205,6 +205,7 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/white_top_button"
                 android:text="Search"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
