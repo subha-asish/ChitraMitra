@@ -17,27 +17,24 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
+
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
+
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.auth.User;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
+
 
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
@@ -73,8 +70,7 @@ public class MainActivity extends AppCompatActivity {
         editText =findViewById(R.id.editText);
         Button button = findViewById(R.id.button);
         gridView = findViewById(R.id.gridViewMainActivity);
-        CardView cardView = findViewById(R.id.cardView);
-        TextView item_name = findViewById(R.id.item_name);
+
         TextView user_name = findViewById(R.id.textView2);
         ImageView logOut = findViewById(R.id.imageView3);
 
@@ -275,9 +271,14 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 // Start the next activity here
             MOVIE_NAME = editText.getText().toString();
-            Intent i = new Intent(getApplicationContext(),SearchResults.class);
-            i.putExtra("keyy",MOVIE_NAME);
-            startActivity(i);
+            if(!MOVIE_NAME.isEmpty()){
+                Intent i = new Intent(getApplicationContext(),SearchResults.class);
+                i.putExtra("keyy",MOVIE_NAME);
+                startActivity(i);
+            }else{
+                Toast.makeText(getApplicationContext(),"Type Something to Search", Toast.LENGTH_SHORT).show();
+            }
+
             }
         }, delayMillis);
 
